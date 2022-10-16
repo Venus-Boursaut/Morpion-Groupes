@@ -1,85 +1,60 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+body {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    background: linear-gradient(90deg, #a1420f, #658477);
+    color: #f1f1f1;
+    padding: clamp(20px, 5vw, 50px) 10px 10px;
 }
 
-#tout {
+h1 {
+    font-size: 40px;
+}
+
+h1 span {
+    border-bottom: 1px solid;
+    font-size: 60px;
+    margin-left: 5px;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1px;
+    max-width: 400px;
+    background: #f1f1f1f1;
+    border: 1px solid #f1f1f1;
+    margin: 50px auto;
+}
+
+.laCase {
+    aspect-ratio: 1/1;
+    background: #2a335b;
+    color: #f1f1f1;
+    cursor: pointer;
+    font-size: 110px;
     display: flex;
     justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    align-items: center;
 }
 
-#first,
-#second,
-#third {}
-
-
-#un,
-#deux,
-#trois {
-    border-left: none;
+@media screen and (max-width:900px) {
+    
+    .laCase {
+        font-size: 80px;
+    }
 }
 
-#un,
-#quatre,
-#sept {
-    border-top: none;
+@media screen and (max-width:500) {
+    
+    .laCase {
+        font-size: 60px;
+    }
 }
-
-#trois,
-#six,
-#neuf {
-    border-bottom: none;
-
-}
-
-#sept,
-#huit,
-#neuf {
-    border-right: none;
-
-}
-
-.morpion {
-    width: 50px;
-    height: 50px;
-    border: 2px black solid;
-}
-
-
-
-
-/* coté a utilisé pour les ronds et les croix */
-.dot {
-    border: 2px black solid;
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
-}
-
-.croix {
-    position: absolute;
-    /* right: 32px;
-    top: 32px; */
-    width: 45px;
-    height: 45px;
-  }
-  .croix:before, .croix:after {
-    position: absolute;
-    left: 15px;
-    content: ' ';
-    height: 33px;
-    width: 2px;
-    background-color: #333;
-  }
-  .croix:before {
-    transform: rotate(45deg);
-  }
-  .croix:after {
-    transform: rotate(-45deg);
-  }
-  
